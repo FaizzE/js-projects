@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenQuote - Raw Motivation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@1,500..800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #050505;
+            --accent: #ffffff;
+        }
+        body {
+            background-color: var(--bg-color);
+            font-family: 'Inter', sans-serif;
+            color: #a1a1aa;
+            margin: 0;
+            overflow: hidden;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .quote-container {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        .btn-premium {
+            background: var(--accent);
+            color: var(--bg-color);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .btn-premium:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+            letter-spacing: 0.05em;
+        }
+        .btn-premium:active {
+            transform: translateY(0);
+        }
+        .blur-blob {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: -1;
+            opacity: 0.15;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+</head>
+<body class="min-h-screen flex items-center justify-center p-6 antialiased">
+    <!-- Decorative Ambient Light -->
+    <div class="blur-blob bg-indigo-600 top-[-20%] left-[-10%]"></div>
+    <div class="blur-blob bg-rose-600 bottom-[-20%] right-[-10%]"></div>
+
+    <main class="w-full max-w-3xl flex flex-col items-center gap-12">
+        <header class="text-center space-y-2">
+            <span class="text-[10px] uppercase tracking-[0.4em] font-semibold text-zinc-500">Daily Discipline</span>
+            <h1 class="text-white text-2xl font-light tracking-tighter">Raw Truth Generator</h1>
+        </header>
+
+        <div class="quote-container relative w-full min-h-[320px] rounded-[3rem] p-12 md:p-20 flex flex-col items-center justify-center text-center transition-all duration-700">
+            <!-- Decorative Icon -->
+            <div class="absolute top-10 left-12 text-zinc-800 pointer-events-none">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C15.4647 8 15.017 8.44772 15.017 9V12C15.017 12.5523 14.5693 13 14.017 13H12.017V21H14.017ZM5.017 21L5.017 18C5.017 16.8954 5.91243 16 7.017 16H10.017C10.5693 16 11.017 15.5523 11.017 15V9C11.017 8.44772 10.5693 8 10.017 8H7.017C6.46472 8 6.017 8.44772 6.017 9V12C6.017 12.5523 5.56929 13 5.017 13H3.017V21H5.017Z"/></svg>
+            </div>
+            
+            <p id="quote" class="text-white text-3xl md:text-4xl lg:text-5xl font-serif italic leading-tight transition-all duration-500">
+                Click below to reveal a harsh truth.
+            </p>
+        </div>
+
+        <button id="btn" class="btn-premium px-12 py-5 rounded-full text-sm font-bold uppercase tracking-widest outline-none">
+            New Perspective
+        </button>
+
+        <footer class="text-[10px] text-zinc-600 uppercase tracking-widest mt-8">
+            Success is rented, and rent is due every day.
+        </footer>
+    </main>
+
+    <script src="logic.js"></script>
+</body>
+</html>
