@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif
+}
+
+.box {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: #f8f8f8;
+    padding: 20px
+}
+
+h1 {
+    font-size: 20px
+}
+
+/* container */
+.progres {
+    width: 600px;
+    /* change as needed; can be 100% */
+    height: 100px;
+    background: #000;
+    border: 3px solid #6c4aa6;
+    border-radius: 10px;
+    padding: 10px;
+    overflow: hidden;
+    display: block;
+}
+
+/* visual bar using transform */
+.progress {
+    height: 100%;
+    width: 100%;
+    /* full-size box that we scale */
+    background: linear-gradient(90deg, #5fe406, limegreen);
+    border-radius: 8px;
+    transform-origin: left;
+    /* scale from left */
+    transform: scaleX(0);
+    /* start collapsed */
+    transition: transform 300ms ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* label at right inside the bar */
+    padding-right: 12px;
+    color: #111;
+    font-weight: 700;
+}
+
+.btn {
+    padding: 10px 18px;
+    border: none;
+    background: #6c4aa6;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer
+}
+
+.btn:active {
+    transform: translateY(1px)
+}

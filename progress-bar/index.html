@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress Bar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="box">
+      <h1>Progress Bar</h1>
+
+      <div class="progres" aria-hidden="false">
+        <div class="progress"><span class="track">0%</span></div>
+      </div>
+
+      <div>
+        <button class="btn" id="start">Download</button>
+        <button
+          class="btn"
+          id="reset"
+          style="background: #999; margin-left: 8px"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+
+    <script src="logic.js"></script>
+  </body>
+</html>
