@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0e0e11;
+  color: #e4e4e7;
+}
+
+.wrapper {
+  background: #1a1a1d;
+  padding: 2rem;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 16px;
+  box-shadow: 0 0 24px rgba(0,0,0,0.4), inset 0 0 1px rgba(255,255,255,0.05);
+  animation: fadeIn 0.6s ease-out;
+}
+
+.title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #f5f5f5;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.input-area {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.inpt {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: #eaeaea;
+  background: #2a2a2e;
+  transition: 0.2s ease;
+}
+
+.inpt:focus {
+  background: #303036;
+  box-shadow: 0 0 0 2px #6366f1;
+}
+
+.add {
+  width: 46px;
+  border: none;
+  border-radius: 10px;
+  background: #6366f1;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.add:hover {
+  background: #7c83f3;
+  transform: scale(1.08);
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-height: 350px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #3a3a3a transparent;
+}
+
+/* Scrollbar style for Chrome */
+.list::-webkit-scrollbar {
+  width: 5px;
+}
+.list::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+  border-radius: 10px;
+}
+
+.list li {
+  background: #222226;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideUp 0.3s ease;
+  transition: 0.25s;
+}
+
+.list li:hover {
+  background: #27272b;
+}
+
+.list button {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.list button:hover {
+  color: #f87171;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

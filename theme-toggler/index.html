@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Theme Toggler</title>
+    <title>Modern Theme Toggler</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
-    <div class="box">
-        <h1>Theme Toggler</h1>
-        <div id="main">
-            <h2>Hey, Hellooooo :)</h2>
-            <div class="hero">
-                <h3>I am hero Section</h3>
-                <h3>I am About Section</h3>
-                <h3>I am Footer Section</h3>
+    <main class="container">
+        <div class="card">
+            <header>
+                <h1>Theme Switcher</h1>
+                <p>Toggle between light and dark mode</p>
+            </header>
+
+            <div class="toggle-container">
+                <input type="checkbox" id="theme-toggle" class="theme-checkbox">
+                <label for="theme-toggle" class="theme-label">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                    <span class="ball"></span>
+                </label>
+            </div>
+
+            <div class="content">
+                <p>Enjoy a comfortable reading experience with our adaptive theme.</p>
+                <button class="primary-btn">Get Started</button>
             </div>
         </div>
-        <button id="dark">Dark Mode</button>
-    </div>
-    
+    </main>
+
     <script src="logic.js"></script>
 </body>
+
 </html>
